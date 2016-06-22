@@ -1,0 +1,76 @@
+ext {
+    android = [
+            compileSdkVersion: 24,
+            buildToolsVersion: "24.0.0",
+            minSdkVersion    : 15,
+            targetSdkVersion : 24,
+    ]
+    deps = [
+            // Android
+            supportannotations    : 'com.android.support:support-annotations:24.0.0',
+            appcompat             : 'com.android.support:appcompat-v7:24.0.0',
+            recyclerview          : 'com.android.support:recyclerview-v7:24.0.0',
+            design                : 'com.android.support:design:24.0.0',
+            gridlayout            : "com.android.support:gridlayout-v7:24.0.0",
+
+            // RxJava
+            rxjava                : 'io.reactivex:rxjava:1.1.6',
+            rxandroid             : 'io.reactivex:rxandroid:1.2.1',
+
+            // ButterKnife
+            butterknife           : 'com.jakewharton:butterknife:8.1.0',
+            butterknifecompiler   : 'com.jakewharton:butterknife-compiler:8.1.0',
+
+            // Dagger2
+            dagger                : 'com.google.dagger:dagger:2.5',
+            daggercompiler        : 'com.google.dagger:dagger-compiler:2.5',
+//        javaxannotation    : 'javax.annotation:jsr250-api:1.0',
+
+            // Retrofit
+            retrofit              : 'com.squareup.retrofit2:retrofit:2.1.0',
+            gsonconvert           : 'com.squareup.retrofit2:converter-gson:2.1.0',
+            rxjavaadapter         : 'com.squareup.retrofit2:adapter-rxjava:2.1.0',
+
+            // OKHttp
+            okhttp                : 'com.squareup.okhttp3:okhttp:3.3.1',
+            okhttpmockwebserver   : 'com.squareup.okhttp3:mockwebserver:3.3.1',
+            okhttploginterceptor  : 'com.squareup.okhttp3:logging-interceptor:3.3.1',
+
+            // Gson
+            gson                  : 'com.google.code.gson:gson:2.7',
+
+            // Glide
+            glide                 : 'com.github.bumptech.glide:glide:3.7.0',
+            glideokhttpintegration: 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar',
+
+            // Timber
+            timber                : 'com.jakewharton.timber:timber:4.1.2',
+
+            // Pull to refresh
+            ultraptr              : 'in.srain.cube:ultra-ptr:1.0.11',
+
+            // Tab Layout
+            flycotablayout        : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.6@aar',
+
+            // RxBus
+            rxbus                 : 'com.hwangjr.rxbus:rxbus:1.0.3',
+
+            // Leak Canary
+            leakcanary            : 'com.squareup.leakcanary:leakcanary-android:1.4-beta2',
+            leakcanarynoop        : 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2',
+
+            // Unit test dependencies
+            junit                 : 'junit:junit:4.12',
+            robolectric           : 'org.robolectric:robolectric:3.0',
+            mockito               : 'org.mockito:mockito-core:1.+',
+
+            // Integration test dependencies
+            testrunner            : 'com.android.support.test:runner:0.5',
+            testrules             : 'com.android.support.test:rules:0.5',
+            espresso              : 'com.android.support.test.espresso:espresso-core:2.2.2',
+            dexmaker              : 'com.crittercism.dexmaker:dexmaker:1.4',
+            dexmakerdx            : 'com.crittercism.dexmaker:dexmaker-dx:1.4',
+            dexmakermockito       : 'com.crittercism.dexmaker:dexmaker-mockito:1.4',
+            spoon                 : 'com.squareup.spoon:spoon-client:1.3.1'
+    ]
+}

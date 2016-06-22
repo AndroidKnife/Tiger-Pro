@@ -1,0 +1,112 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Support
+    compile deps.appcompat
+    compile deps.recyclerview
+    compile deps.design
+    compile deps.supportannotations
+    compile deps.gridlayout
+    // RxJava
+    compile deps.rxjava
+    compile deps.rxandroid
+    // RxBus
+    compile(deps.rxbus) {
+        exclude group: 'com.hwangjr.utils', module: 'timber'
+    }
+    // ButterKnife
+    compile deps.butterknife
+    apt deps.butterknifecompiler
+    // Dagger
+    compile deps.dagger
+    apt deps.daggercompiler
+    // Retrofit
+    compile deps.retrofit
+    compile deps.gsonconvert
+    compile deps.rxjavaadapter
+    // OKHttp
+    compile deps.okhttp
+    compile deps.okhttploginterceptor
+    testCompile deps.okhttpmockwebserver
+    // Gson
+    compile deps.gson
+    // Glide
+    compile deps.glide
+    compile deps.glideokhttpintegration
+    // Leak Canary
+    releaseCompile deps.leakcanarynoop
+    debugCompile deps.leakcanary
+    testCompile deps.leakcanarynoop
+    // Timber
+    compile deps.timber
+    // Pull to refresh
+    compile deps.ultraptr
+    // Tab Layout
+    compile deps.flycotablayout
+    // Unit
+    testCompile deps.junit
+    testCompile deps.robolectric
+    testCompile deps.mockito
+    // Integration
+    androidTestCompile deps.testrunner
+    androidTestCompile deps.testrules
+    androidTestCompile deps.espresso
+    androidTestCompile deps.mockito
+    androidTestCompile deps.dexmaker
+    androidTestCompile deps.dexmakerdx
+    androidTestCompile deps.dexmakermockito
+    androidTestCompile deps.spoon
+    // Resolve conflicts between main and test APK:
+    androidTestCompile deps.supportannotations
+    androidTestCompile deps.appcompat
+    androidTestCompile deps.recyclerview
+    androidTestCompile deps.design
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        debug {
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+        }
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', fileTree(dir: '../proguards', include: '*.pro')
+        }
+    }
+    lintOptions {
+        textReport true
+        textOutput 'stdout'
+        fatal 'UnusedResources'
+    }
+    sourceSets {
+        main {
+            // disable automatic ndk-build call, which ignore our Android.mk
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs', 'src/main/libs']
+        }
+    }
+}
