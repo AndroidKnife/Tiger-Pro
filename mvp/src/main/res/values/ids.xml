@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mvp_tips" type="id" />
+    <item name="ptr_frame" type="id" />
+    <item name="recycler_view" type="id" />
+    <item name="more_progress" type="id" />
+</resources>
