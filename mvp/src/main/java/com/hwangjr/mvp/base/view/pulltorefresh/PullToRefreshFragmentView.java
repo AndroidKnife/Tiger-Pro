@@ -81,6 +81,14 @@ public abstract class PullToRefreshFragmentView<P extends FragmentPresenter> ext
         return !canChildScrollUp(content);
     }
 
+    @Override
+    public void onDestroyView() {
+        if (getPtrFrameLayout() != null) {
+            getPtrFrameLayout().refreshComplete();
+        }
+        super.onDestroyView();
+    }
+
     protected int getPullMode() {
         return PULL_MODE_REFRESH;
     }
