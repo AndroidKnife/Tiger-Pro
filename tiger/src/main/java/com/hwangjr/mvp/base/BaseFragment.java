@@ -8,12 +8,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
 
-import com.hwangjr.mvp.R;
+import com.hwangjr.mvp.MVPApplication;
 import com.hwangjr.mvp.di.components.ActivityComponent;
 import com.hwangjr.mvp.di.components.DaggerFragmentComponent;
 import com.hwangjr.mvp.di.components.FragmentComponent;
 import com.hwangjr.mvp.di.modules.FragmentModule;
 import com.hwangjr.mvp.widget.SnackbarWrapper;
+import com.hwangjr.tiger.R;
 import com.squareup.leakcanary.RefWatcher;
 
 import butterknife.ButterKnife;
@@ -55,7 +56,7 @@ public abstract class BaseFragment extends Fragment {
         try {
             if (fragmentComponent == null) {
                 fragmentComponent = DaggerFragmentComponent.builder()
-                        .appComponent(AppApplication.getAppComponent())
+                        .appComponent(MVPApplication.getAppComponent())
                         .fragmentModule(new FragmentModule(this)).build();
             }
         } catch (Exception e) {
@@ -114,7 +115,7 @@ public abstract class BaseFragment extends Fragment {
             ((ViewGroup) mainView.getParent()).removeView(mainView);
         }
         super.onDestroy();
-        RefWatcher refWatcher = AppApplication.getRefWatcher(getActivity());
+        RefWatcher refWatcher = MVPApplication.getRefWatcher(getActivity());
         refWatcher.watch(this);
     }
 

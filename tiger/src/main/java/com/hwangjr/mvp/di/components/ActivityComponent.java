@@ -4,7 +4,7 @@ import android.app.Activity;
 
 import com.hwangjr.mvp.di.modules.ActivityModule;
 import com.hwangjr.mvp.di.scopes.PerActivity;
-import com.hwangjr.mvp.ui.MainActivity;
+import com.hwangjr.tiger.ui.MainActivity;
 
 import dagger.Component;
 

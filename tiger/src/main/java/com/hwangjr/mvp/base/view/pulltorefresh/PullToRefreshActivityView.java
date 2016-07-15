@@ -5,10 +5,10 @@ import android.support.v4.view.ViewCompat;
 import android.view.View;
 import android.widget.AbsListView;
 
-import com.hwangjr.mvp.R;
 import com.hwangjr.mvp.base.presenter.ActivityPresenter;
 import com.hwangjr.mvp.base.view.activity.ActivityView;
 import com.hwangjr.mvp.utils.DensityUtils;
+import com.hwangjr.tiger.R;
 
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrHandler;

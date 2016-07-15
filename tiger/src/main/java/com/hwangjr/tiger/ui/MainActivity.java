@@ -1,7 +1,7 @@
-package com.hwangjr.mvp.ui;
+package com.hwangjr.tiger.ui;
 
-import com.hwangjr.mvp.R;
 import com.hwangjr.mvp.base.view.activity.ActivityView;
+import com.hwangjr.tiger.R;
 
 public class MainActivity extends ActivityView<MainActivityPresenter> {
     @Override

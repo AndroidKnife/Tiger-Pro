@@ -1,4 +1,4 @@
-package com.hwangjr.mvp.ui;
+package com.hwangjr.tiger.ui;
 
 import com.hwangjr.mvp.base.presenter.ActivityPresenter;
 import com.hwangjr.mvp.di.scopes.PerActivity;

@@ -11,10 +11,10 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 import android.view.ViewStub;
 
-import com.hwangjr.mvp.R;
 import com.hwangjr.mvp.base.view.DataView;
 import com.hwangjr.mvp.base.view.pulltorefresh.PullToRefreshFragmentView;
 import com.hwangjr.mvp.widget.DividerItemDecoration;
+import com.hwangjr.tiger.R;
 
 import in.srain.cube.views.ptr.PtrFrameLayout;
 

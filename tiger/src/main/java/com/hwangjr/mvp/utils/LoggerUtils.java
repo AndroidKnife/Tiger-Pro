@@ -2,7 +2,7 @@ package com.hwangjr.mvp.utils;
 
 import android.os.Environment;
 
-import com.hwangjr.mvp.base.AppApplication;
+import com.hwangjr.mvp.MVPApplication;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -16,7 +16,7 @@ public class LoggerUtils {
 
     private static void writeLogToFile(String fileName, String logContent) {
         if (SDCardUtils.hasSDCard()) {
-            File root = new File(new File(Environment.getExternalStorageDirectory(), AppApplication.getInstance().getPackageName()), "log");
+            File root = new File(new File(Environment.getExternalStorageDirectory(), MVPApplication.getInstance().getPackageName()), "log");
             if (!root.exists()) {
                 root.mkdirs();
             }

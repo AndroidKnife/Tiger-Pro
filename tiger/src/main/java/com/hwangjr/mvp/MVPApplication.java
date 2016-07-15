@@ -1,11 +1,10 @@
-package com.hwangjr.mvp.base;
+package com.hwangjr.mvp;
 
 import android.app.Application;
 import android.content.Context;
 import android.os.StrictMode;
 import android.util.Log;
 
-import com.hwangjr.mvp.BuildConfig;
 import com.hwangjr.mvp.di.components.AppComponent;
 import com.hwangjr.mvp.di.components.DaggerAppComponent;
 import com.hwangjr.mvp.di.modules.AppModule;
@@ -15,8 +14,8 @@ import com.squareup.leakcanary.RefWatcher;
 
 import timber.log.Timber;
 
-public class AppApplication extends Application {
-    private static AppApplication sInstance;
+public class MVPApplication extends Application {
+    private static MVPApplication sInstance;
     private AppComponent appComponent;
 
     private RefWatcher refWatcher;
@@ -62,7 +61,7 @@ public class AppApplication extends Application {
         android.os.Process.killProcess(android.os.Process.myPid());
     }
 
-    public static AppApplication getInstance() {
+    public static MVPApplication getInstance() {
         return sInstance;
     }
 
@@ -71,7 +70,7 @@ public class AppApplication extends Application {
     }
 
     public static RefWatcher getRefWatcher(Context context) {
-        AppApplication application = (AppApplication) context.getApplicationContext();
+        MVPApplication application = (MVPApplication) context.getApplicationContext();
         return application.refWatcher;
     }
 
