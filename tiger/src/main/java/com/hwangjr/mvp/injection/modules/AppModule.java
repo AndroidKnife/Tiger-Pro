@@ -1,4 +1,4 @@
-package com.hwangjr.mvp.di.modules;
+package com.hwangjr.mvp.injection.modules;
 
 import android.app.Application;
 

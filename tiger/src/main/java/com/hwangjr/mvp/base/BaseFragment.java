@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import android.view.ViewStub;
 
 import com.hwangjr.mvp.MVPApplication;
-import com.hwangjr.mvp.di.components.ActivityComponent;
-import com.hwangjr.mvp.di.components.DaggerFragmentComponent;
-import com.hwangjr.mvp.di.components.FragmentComponent;
-import com.hwangjr.mvp.di.modules.FragmentModule;
+import com.hwangjr.mvp.injection.components.ActivityComponent;
+import com.hwangjr.mvp.injection.components.DaggerFragmentComponent;
+import com.hwangjr.mvp.injection.components.FragmentComponent;
+import com.hwangjr.mvp.injection.modules.FragmentModule;
 import com.hwangjr.mvp.widget.SnackbarWrapper;
 import com.hwangjr.tiger.R;
 import com.squareup.leakcanary.RefWatcher;

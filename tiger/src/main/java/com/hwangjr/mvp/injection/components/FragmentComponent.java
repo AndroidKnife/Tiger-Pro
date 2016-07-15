@@ -1,9 +1,9 @@
-package com.hwangjr.mvp.di.components;
+package com.hwangjr.mvp.injection.components;
 
 import android.support.v4.app.Fragment;
 
-import com.hwangjr.mvp.di.modules.FragmentModule;
-import com.hwangjr.mvp.di.scopes.PerFragment;
+import com.hwangjr.mvp.injection.modules.FragmentModule;
+import com.hwangjr.mvp.injection.scopes.PerFragment;
 
 import dagger.Component;
 

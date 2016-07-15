@@ -1,8 +1,8 @@
-package com.hwangjr.mvp.di.modules;
+package com.hwangjr.mvp.injection.modules;
 
 import android.app.Activity;
 
-import com.hwangjr.mvp.di.scopes.PerActivity;
+import com.hwangjr.mvp.injection.scopes.PerActivity;
 
 import dagger.Module;
 import dagger.Provides;

@@ -10,9 +10,9 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
 import com.hwangjr.mvp.MVPApplication;
-import com.hwangjr.mvp.di.components.ActivityComponent;
-import com.hwangjr.mvp.di.components.DaggerActivityComponent;
-import com.hwangjr.mvp.di.modules.ActivityModule;
+import com.hwangjr.mvp.injection.components.ActivityComponent;
+import com.hwangjr.mvp.injection.components.DaggerActivityComponent;
+import com.hwangjr.mvp.injection.modules.ActivityModule;
 import com.hwangjr.mvp.utils.ActivityAssistant;
 import com.hwangjr.mvp.utils.StatusBarUtils;
 import com.hwangjr.mvp.widget.SnackbarWrapper;

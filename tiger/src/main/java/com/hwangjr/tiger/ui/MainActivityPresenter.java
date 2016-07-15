@@ -1,7 +1,7 @@
 package com.hwangjr.tiger.ui;
 
 import com.hwangjr.mvp.base.presenter.ActivityPresenter;
-import com.hwangjr.mvp.di.scopes.PerActivity;
+import com.hwangjr.mvp.injection.scopes.PerActivity;
 
 import javax.inject.Inject;
 

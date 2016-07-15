@@ -1,4 +1,4 @@
-package com.hwangjr.mvp.di.scopes;
+package com.hwangjr.mvp.injection.scopes;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -7,5 +7,5 @@ import javax.inject.Scope;
 
 @Scope
 @Retention(RetentionPolicy.RUNTIME)
-public @interface PerActivity {
+public @interface PerFragment {
 }

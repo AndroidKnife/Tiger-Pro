@@ -1,9 +1,9 @@
-package com.hwangjr.mvp.di.components;
+package com.hwangjr.mvp.injection.components;
 
 import android.app.Activity;
 
-import com.hwangjr.mvp.di.modules.ActivityModule;
-import com.hwangjr.mvp.di.scopes.PerActivity;
+import com.hwangjr.mvp.injection.modules.ActivityModule;
+import com.hwangjr.mvp.injection.scopes.PerActivity;
 import com.hwangjr.tiger.ui.MainActivity;
 
 import dagger.Component;

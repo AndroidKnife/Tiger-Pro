@@ -1,8 +1,8 @@
-package com.hwangjr.mvp.di.components;
+package com.hwangjr.mvp.injection.components;
 
 import android.app.Application;
 
-import com.hwangjr.mvp.di.modules.AppModule;
+import com.hwangjr.mvp.injection.modules.AppModule;
 
 import javax.inject.Singleton;
 

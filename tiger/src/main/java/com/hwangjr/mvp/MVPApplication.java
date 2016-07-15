@@ -5,10 +5,11 @@ import android.content.Context;
 import android.os.StrictMode;
 import android.util.Log;
 
-import com.hwangjr.mvp.di.components.AppComponent;
-import com.hwangjr.mvp.di.components.DaggerAppComponent;
-import com.hwangjr.mvp.di.modules.AppModule;
+import com.hwangjr.mvp.injection.components.AppComponent;
+import com.hwangjr.mvp.injection.components.DaggerAppComponent;
+import com.hwangjr.mvp.injection.modules.AppModule;
 import com.hwangjr.mvp.utils.LoggerUtils;
+import com.hwangjr.tiger.BuildConfig;
 import com.squareup.leakcanary.LeakCanary;
 import com.squareup.leakcanary.RefWatcher;
 
