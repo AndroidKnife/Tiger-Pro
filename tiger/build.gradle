@@ -10,7 +10,6 @@ dependencies {
     compile deps.recyclerview
     compile deps.design
     compile deps.supportannotations
-    compile deps.gridlayout
     // RxJava
     compile deps.rxjava
     compile deps.rxandroid
@@ -47,11 +46,17 @@ dependencies {
     compile deps.ultraptr
     // Tab Layout
     compile deps.flycotablayout
-    // Unit
+
+    // Unit tests dependencies
     testCompile deps.junit
     testCompile deps.robolectric
     testCompile deps.mockito
+    testCompile deps.hamcrestcore
+    testCompile deps.hamcrestlibrary
+    testCompile deps.hamcrestintegration
+    
     // Integration
+    androidTestCompile deps.junit
     androidTestCompile deps.testrunner
     androidTestCompile deps.testrules
     androidTestCompile deps.espresso
