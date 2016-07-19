@@ -154,8 +154,8 @@ public abstract class PullToRefreshRecyclerFragmentView<P extends PullToRefreshR
         int visibleItemCount = layoutManager.getChildCount();
         int totalItemCount = layoutManager.getItemCount();
 
-        if (((totalItemCount - lastVisibleItemPosition) <= ITEM_LEFT_TO_LOAD_MORE ||
-                (totalItemCount - lastVisibleItemPosition) == 0 && totalItemCount > visibleItemCount)
+        if (((totalItemCount - lastVisibleItemPosition) <= ITEM_LEFT_TO_LOAD_MORE
+                || (totalItemCount - lastVisibleItemPosition) == 0 && totalItemCount > visibleItemCount)
                 && !isLoadingMore) {
             if (haveMore()) {
                 showMoreProgress();
@@ -187,9 +187,6 @@ public abstract class PullToRefreshRecyclerFragmentView<P extends PullToRefreshR
         }
 
         switch (layoutManagerType) {
-            case LAYOUT_MANAGER_TYPE_LINEAR:
-                lastVisibleItemPosition = ((LinearLayoutManager) layoutManager).findLastVisibleItemPosition();
-                break;
             case LAYOUT_MANAGER_TYPE_GRID:
                 lastVisibleItemPosition = ((GridLayoutManager) layoutManager).findLastVisibleItemPosition();
                 break;
@@ -201,6 +198,10 @@ public abstract class PullToRefreshRecyclerFragmentView<P extends PullToRefreshR
 
                 staggeredGridLayoutManager.findLastVisibleItemPositions(lastScrollPositions);
                 lastVisibleItemPosition = findMax(lastScrollPositions);
+                break;
+            case LAYOUT_MANAGER_TYPE_LINEAR:
+            default:
+                lastVisibleItemPosition = ((LinearLayoutManager) layoutManager).findLastVisibleItemPosition();
                 break;
         }
         return lastVisibleItemPosition;

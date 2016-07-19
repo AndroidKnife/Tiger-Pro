@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Date;
 
-public class LoggerUtils {
+public final class LoggerUtils {
     private static final String CRASH_FILE_NAME = "Crash.log";
     private static final String DEBUG_FILE_NAME = "Debug.log";
     private static final String LEAK_FILE_NAME = "Leak.log";

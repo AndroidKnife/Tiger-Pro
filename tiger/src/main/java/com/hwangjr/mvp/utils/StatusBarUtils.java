@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
-public class StatusBarUtils {
+public final class StatusBarUtils {
     public static final int DEFAULT_STATUS_BAR_ALPHA = 112;
 
     public static void setColor(Activity activity, int color) {

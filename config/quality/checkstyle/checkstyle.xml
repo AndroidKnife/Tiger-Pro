@@ -185,7 +185,7 @@
         <module name="InnerAssignment" />
         <!--module name="MagicNumber"/-->
         <module name="MissingSwitchDefault" />
-        <module name="RedundantThrows" />
+        <!--<module name="RedundantThrows" />-->
         <module name="SimplifyBooleanExpression" />
         <module name="SimplifyBooleanReturn" />
         <module name="NoFinalizer" />
@@ -194,7 +194,7 @@
         <!-- See http://checkstyle.sf.net/config_design.html -->
         <!--module name="DesignForExtension"/-->
         <!--module name="FinalClass"/-->
-        <module name="HideUtilityClassConstructor" />
+        <!--<module name="HideUtilityClassConstructor" />-->
         <module name="InterfaceIsType" />
         <!--<module name="VisibilityModifier"/>-->
 

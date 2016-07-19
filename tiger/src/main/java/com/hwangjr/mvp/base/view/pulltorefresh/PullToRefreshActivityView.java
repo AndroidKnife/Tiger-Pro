@@ -16,7 +16,7 @@ import in.srain.cube.views.ptr.header.MaterialHeader;
 
 public abstract class PullToRefreshActivityView<P extends ActivityPresenter> extends ActivityView<P> implements PtrHandler {
 
-    public static final long REFRESH_TIME_INTERVAL = 2000 * 1000l;
+    public static final long REFRESH_TIME_INTERVAL = 2000 * 1000L;
 
     public static final int PULL_MODE_REFRESH = 0;
     public static final int PULL_MODE_REFRESH_LOADMORE = 1;

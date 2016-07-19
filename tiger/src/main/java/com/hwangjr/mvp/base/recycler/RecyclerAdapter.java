@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class RecyclerAdapter<D, VH extends RecyclerViewHolder> extends RecyclerView.Adapter<RecyclerViewHolder> {
+public abstract class RecyclerAdapter<D, V extends RecyclerViewHolder> extends RecyclerView.Adapter<RecyclerViewHolder> {
 
     public static final int VIEW_TYPE_HEADER = -1;
     private Context context;
@@ -82,12 +82,12 @@ public abstract class RecyclerAdapter<D, VH extends RecyclerViewHolder> extends 
         if (hasHeader()) {
             if (!isHeader(position)) {
                 int index = position - 1;
-                onBindItemViewHolder((VH) holder, position, index, isScrolling);
-                ((VH) holder).itemView.setOnClickListener(getOnClickListener(index));
+                onBindItemViewHolder((V) holder, position, index, isScrolling);
+                ((V) holder).itemView.setOnClickListener(getOnClickListener(index));
             }
         } else {
-            onBindItemViewHolder((VH) holder, position, position, isScrolling);
-            ((VH) holder).itemView.setOnClickListener(getOnClickListener(position));
+            onBindItemViewHolder((V) holder, position, position, isScrolling);
+            ((V) holder).itemView.setOnClickListener(getOnClickListener(position));
         }
     }
 
@@ -95,17 +95,17 @@ public abstract class RecyclerAdapter<D, VH extends RecyclerViewHolder> extends 
         this.headerView = headerView;
     }
 
-    protected <HEADER extends RecyclerViewHolder> HEADER getHeaderViewHolder() {
-        return (HEADER) headerView;
+    protected <H extends RecyclerViewHolder> H getHeaderViewHolder() {
+        return (H) headerView;
     }
 
     protected abstract int getItemLayoutID(int viewType);
 
-    protected abstract VH createItemViewHolder(View itemView, int viewType);
+    protected abstract V createItemViewHolder(View itemView, int viewType);
 
     protected abstract int getViewType(int position);
 
-    protected abstract void onBindItemViewHolder(VH holder, int position, int index,
+    protected abstract void onBindItemViewHolder(V holder, int position, int index,
                                                  boolean isScrolling);
 
     public void add(D elem) {

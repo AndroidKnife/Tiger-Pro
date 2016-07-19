@@ -62,8 +62,8 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private void translucentStatus() {
         StatusBarUtils.setColor(this, getResources().getColor(R.color.colorPrimaryDark));
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT &&
-                getWindow().getAttributes().softInputMode == WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
+                && getWindow().getAttributes().softInputMode == WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE) {
             ActivityAssistant.assistActivity(this);
         }
     }
@@ -81,7 +81,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                     try {
                         f = imm.getClass()
                                 .getDeclaredField(param);
-                        if (f.isAccessible() == false) {
+                        if (!f.isAccessible()) {
                             f.setAccessible(true);
                         }
                         objGet = f.get(imm);

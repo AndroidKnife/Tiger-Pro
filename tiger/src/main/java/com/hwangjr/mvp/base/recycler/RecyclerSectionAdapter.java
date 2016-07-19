@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import java.util.Collection;
 import java.util.List;
 
-public abstract class RecyclerSectionAdapter<T, VH extends RecyclerViewHolder> extends RecyclerAdapter<T, VH> {
+public abstract class RecyclerSectionAdapter<T, V extends RecyclerViewHolder> extends RecyclerAdapter<T, V> {
     protected static final int VIEW_TYPE_SECTION = -2;
 
     public RecyclerSectionAdapter(RecyclerView recyclerView) {

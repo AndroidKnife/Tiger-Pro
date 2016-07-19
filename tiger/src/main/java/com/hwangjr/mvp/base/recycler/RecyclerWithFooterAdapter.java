@@ -5,7 +5,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-public abstract class RecyclerWithFooterAdapter<D, VH extends RecyclerViewHolder> extends RecyclerAdapter<D, VH> {
+public abstract class RecyclerWithFooterAdapter<D, V extends RecyclerViewHolder> extends RecyclerAdapter<D, V> {
 
     public static final int VIEW_TYPE_FOOTER = -2;
 
@@ -64,7 +64,7 @@ public abstract class RecyclerWithFooterAdapter<D, VH extends RecyclerViewHolder
         this.footerView = footerView;
     }
 
-    protected <FOOTER extends RecyclerViewHolder> FOOTER getFooterViewHolder() {
-        return (FOOTER) footerView;
+    protected <F extends RecyclerViewHolder> F getFooterViewHolder() {
+        return (F) footerView;
     }
 }

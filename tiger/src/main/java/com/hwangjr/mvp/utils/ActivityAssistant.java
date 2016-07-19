@@ -6,7 +6,7 @@ import android.graphics.Rect;
 import android.view.View;
 import android.widget.FrameLayout;
 
-public class ActivityAssistant {
+public final class ActivityAssistant {
     // For more information, see
     // https://code.google.com/p/android/issues/detail?id=5497
     // To use this class, simply invoke assistActivity() on an Activity that already has its content view set.
@@ -25,9 +25,7 @@ public class ActivityAssistant {
         mWindowHeight = activity.getWindowManager().getDefaultDisplay().getHeight();
         mChildOfContent = content.getChildAt(0);
         mChildOfContent.getViewTreeObserver()
-                .addOnGlobalLayoutListener(() -> {
-                    possiblyResizeChildOfContent(activity);
-                });
+                .addOnGlobalLayoutListener(() -> possiblyResizeChildOfContent(activity));
         frameLayoutParams = (FrameLayout.LayoutParams) mChildOfContent.getLayoutParams();
     }
 

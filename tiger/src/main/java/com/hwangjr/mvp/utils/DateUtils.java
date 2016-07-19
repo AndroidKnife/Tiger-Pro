@@ -4,7 +4,7 @@ import android.text.format.DateFormat;
 
 import java.util.Date;
 
-public class DateUtils {
+public final class DateUtils {
 
     public static final String SDF_YYYYMMDD = "yyyy-MM-dd";
     public static final String SDF_YMDHHMMSS = "yyyy-MM-dd HH:mm:ss";

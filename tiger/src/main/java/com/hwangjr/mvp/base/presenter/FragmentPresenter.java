@@ -5,8 +5,6 @@ import android.support.annotation.Nullable;
 
 import com.hwangjr.mvp.base.view.MVPView;
 
-import javax.inject.Inject;
-
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
 
