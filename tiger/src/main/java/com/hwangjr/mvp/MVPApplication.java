@@ -24,7 +24,7 @@ public class MVPApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        this.sInstance = this;
+        setInstance(this);
         setupComponent();
 
         refWatcher = LeakCanary.install(this);
@@ -45,6 +45,10 @@ public class MVPApplication extends Application {
         }
     }
 
+    private static void setInstance(MVPApplication application) {
+        MVPApplication.sInstance = application;
+    }
+
     private void setupComponent() {
         appComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
@@ -55,11 +59,6 @@ public class MVPApplication extends Application {
     public void onLowMemory() {
         android.os.Process.killProcess(android.os.Process.myPid());
         super.onLowMemory();
-    }
-
-    public void exit() {
-        System.gc();
-        android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     public static MVPApplication getInstance() {

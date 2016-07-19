@@ -4,9 +4,11 @@ import android.os.Environment;
 
 import com.hwangjr.mvp.MVPApplication;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.Writer;
 import java.util.Date;
 
 public final class LoggerUtils {
@@ -25,32 +27,25 @@ public final class LoggerUtils {
             String nowtimeFormat = DateUtils.format(DateUtils.SDF_YYYYMMDD, nowtime);
             String logFileName = nowtimeFormat + fileName;
 
-            FileWriter filerWriter = null;
-            BufferedWriter bufWriter = null;
+            PrintWriter printWriter = null;
             try {
                 File file = new File(root, logFileName);
-                filerWriter = new FileWriter(file, true);
-                bufWriter = new BufferedWriter(filerWriter);
-                bufWriter.write("=================================================");
-                bufWriter.newLine();
-                bufWriter.write(
-                        DateUtils.format(DateUtils.SDF_YMDHHMMSS, nowtime));
-                bufWriter.newLine();
-                bufWriter.write(logContent);
-                bufWriter.newLine();
-
-
+                Writer writer = new OutputStreamWriter(new FileOutputStream(file), "UTF-8");
+                printWriter = new PrintWriter(writer);
+                printWriter.println("=================================================");
+                printWriter.println(DateUtils.format(DateUtils.SDF_YMDHHMMSS, nowtime));
+                printWriter.println(logContent);
+                printWriter.close();
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
-                if (bufWriter != null) {
+                if (printWriter != null) {
                     try {
-                        bufWriter.close();
+                        printWriter.close();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
-
             }
         }
     }
