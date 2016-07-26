@@ -69,7 +69,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract void initView();
 
-    protected void initData(@Nullable Bundle savedInstanceState) {
+    protected void initData(@Nullable Bundle arguments) {
     }
 
     @Nullable
@@ -80,7 +80,7 @@ public abstract class BaseFragment extends Fragment {
             unbinder = ButterKnife.bind(this, mainView);
             initView();
             isViewCreated = true;
-            initData(savedInstanceState);
+            initData(getArguments());
         }
         return mainView;
     }

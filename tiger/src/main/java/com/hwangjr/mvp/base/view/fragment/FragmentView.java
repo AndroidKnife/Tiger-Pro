@@ -39,9 +39,9 @@ public abstract class FragmentView<P extends FragmentPresenter> extends BaseFrag
     }
 
     @Override
-    protected void initData(@Nullable Bundle savedInstanceState) {
-        super.initData(savedInstanceState);
-        presenter.initData(savedInstanceState);
+    protected void initData(@Nullable Bundle arguments) {
+        super.initData(arguments);
+        presenter.initData(arguments);
     }
 
     @Override

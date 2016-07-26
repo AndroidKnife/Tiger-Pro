@@ -34,7 +34,7 @@ public abstract class FragmentPresenter<V extends MVPView> implements Presenter<
     public void onCreate(@Nullable Bundle savedInstanceState) {
     }
 
-    public void initData(@Nullable Bundle savedInstanceState) {
+    public void initData(@Nullable Bundle arguments) {
     }
 
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

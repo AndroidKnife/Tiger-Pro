@@ -79,8 +79,8 @@ public abstract class PullToRefreshRecyclerFragmentView<P extends PullToRefreshR
     }
 
     @Override
-    protected void initData(@Nullable Bundle savedInstanceState) {
-        super.initData(savedInstanceState);
+    protected void initData(@Nullable Bundle arguments) {
+        super.initData(arguments);
         loadData();
     }
 
