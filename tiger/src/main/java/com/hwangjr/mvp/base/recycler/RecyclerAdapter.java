@@ -155,7 +155,7 @@ public abstract class RecyclerAdapter<D, V extends RecyclerViewHolder> extends R
 
     public View.OnClickListener getOnClickListener(final int position) {
         return view -> {
-            if (listener != null && view != null) {
+            if (listener != null && view != null && getData().size() > position) {
                 listener.onItemClick(view, getData().get(position), position);
             }
         };
