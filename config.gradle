@@ -52,7 +52,7 @@ ext {
             flycotablayout        : 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.6@aar',
 
             // RxBus
-            rxbus                 : 'com.hwangjr.rxbus:rxbus:1.0.4',
+            rxbus                 : 'com.hwangjr.rxbus:rxbus:1.0.5',
 
             // Leak Canary
             leakcanary            : 'com.squareup.leakcanary:leakcanary-android:1.4-beta2',

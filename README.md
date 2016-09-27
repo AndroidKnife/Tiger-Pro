@@ -9,6 +9,7 @@ Libraries and tools included:
 - Support libraries
 - RecyclerViews
 - [RxJava](https://github.com/ReactiveX/RxJava) and [RxAndroid](https://github.com/ReactiveX/RxAndroid) 
+- [RxBus](https://github.com/AndroidKnife/RxBus)
 - [Retrofit 2](http://square.github.io/retrofit/)
 - [OKHttp](https://github.com/square/okhttp)
 - [Dagger 2](http://google.github.io/dagger/)
