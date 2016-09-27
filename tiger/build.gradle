@@ -101,7 +101,8 @@ android {
             minifyEnabled true
             zipAlignEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro', fileTree(dir: '../proguards', include: '*.pro')
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles fileTree(dir: "${projectDir.parent}/proguards", include: ['*.pro']).asList().toArray()
         }
     }
     lintOptions {
