@@ -94,12 +94,6 @@ public abstract class PullToRefreshRecyclerFragmentView<P extends PullToRefreshR
         presenter.reloadData();
     }
 
-    @Override
-    public void onDestroyView() {
-        getPtrFrameLayout().refreshComplete();
-        super.onDestroyView();
-    }
-
     private void initRecyclerView(View view) {
         View recyclerView = view.findViewById(getRecyclerViewID());
         if (recyclerView instanceof RecyclerView) {
