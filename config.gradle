@@ -1,28 +1,28 @@
 ext {
     android = [
             compileSdkVersion: 24,
-            buildToolsVersion: "24.0.0",
+            buildToolsVersion: "24.0.3",
             minSdkVersion    : 15,
             targetSdkVersion : 24,
     ]
     deps = [
             // Android
-            supportannotations    : 'com.android.support:support-annotations:24.0.0',
-            appcompat             : 'com.android.support:appcompat-v7:24.0.0',
-            recyclerview          : 'com.android.support:recyclerview-v7:24.0.0',
-            design                : 'com.android.support:design:24.0.0',
+            supportannotations    : 'com.android.support:support-annotations:24.2.0',
+            appcompat             : 'com.android.support:appcompat-v7:24.2.0',
+            recyclerview          : 'com.android.support:recyclerview-v7:24.2.0',
+            design                : 'com.android.support:design:24.2.0',
 
             // RxJava
-            rxjava                : 'io.reactivex:rxjava:1.1.6',
+            rxjava                : 'io.reactivex:rxjava:1.2.0',
             rxandroid             : 'io.reactivex:rxandroid:1.2.1',
 
             // ButterKnife
-            butterknife           : 'com.jakewharton:butterknife:8.1.0',
-            butterknifecompiler   : 'com.jakewharton:butterknife-compiler:8.1.0',
+            butterknife           : 'com.jakewharton:butterknife:8.4.0',
+            butterknifecompiler   : 'com.jakewharton:butterknife-compiler:8.4.0',
 
             // Dagger2
-            dagger                : 'com.google.dagger:dagger:2.5',
-            daggercompiler        : 'com.google.dagger:dagger-compiler:2.5',
+            dagger                : 'com.google.dagger:dagger:2.7',
+            daggercompiler        : 'com.google.dagger:dagger-compiler:2.7',
 //        javaxannotation    : 'javax.annotation:jsr250-api:1.0',
 
             // Retrofit
@@ -31,9 +31,9 @@ ext {
             rxjavaadapter         : 'com.squareup.retrofit2:adapter-rxjava:2.1.0',
 
             // OKHttp
-            okhttp                : 'com.squareup.okhttp3:okhttp:3.3.1',
-            okhttpmockwebserver   : 'com.squareup.okhttp3:mockwebserver:3.3.1',
-            okhttploginterceptor  : 'com.squareup.okhttp3:logging-interceptor:3.3.1',
+            okhttp                : 'com.squareup.okhttp3:okhttp:3.4.1',
+            okhttpmockwebserver   : 'com.squareup.okhttp3:mockwebserver:3.4.1',
+            okhttploginterceptor  : 'com.squareup.okhttp3:logging-interceptor:3.4.1',
 
             // Gson
             gson                  : 'com.google.code.gson:gson:2.7',
@@ -43,7 +43,7 @@ ext {
             glideokhttpintegration: 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar',
 
             // Timber
-            timber                : 'com.jakewharton.timber:timber:4.1.2',
+            timber                : 'com.jakewharton.timber:timber:4.3.1',
 
             // Pull to refresh
             ultraptr              : 'in.srain.cube:ultra-ptr:1.0.11',
@@ -55,12 +55,12 @@ ext {
             rxbus                 : 'com.hwangjr.rxbus:rxbus:1.0.5',
 
             // Leak Canary
-            leakcanary            : 'com.squareup.leakcanary:leakcanary-android:1.4-beta2',
-            leakcanarynoop        : 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2',
+            leakcanary            : 'com.squareup.leakcanary:leakcanary-android:1.5',
+            leakcanarynoop        : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5',
 
             // Unit test dependencies
             junit                 : 'junit:junit:4.12',
-            robolectric           : 'org.robolectric:robolectric:3.1',
+            robolectric           : 'org.robolectric:robolectric:3.1.1',
             mockito               : 'org.mockito:mockito-core:1.+',
             hamcrestcore          : 'org.hamcrest:hamcrest-core:1.3',
             hamcrestlibrary       : 'org.hamcrest:hamcrest-library:1.3',
