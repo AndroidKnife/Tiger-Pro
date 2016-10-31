@@ -116,7 +116,7 @@ public abstract class RecyclerAdapter<D, V extends RecyclerViewHolder> extends R
     public void addAll(List<D> elem) {
         final int positionStart = data.size();
         data.addAll(elem);
-        notifyItemRangeInserted(positionStart, data.size());
+        notifyItemRangeInserted(positionStart, elem.size());
     }
 
     public void set(D oldElem, D newElem) {
