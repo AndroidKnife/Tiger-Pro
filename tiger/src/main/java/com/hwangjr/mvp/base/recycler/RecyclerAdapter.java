@@ -16,7 +16,7 @@ public abstract class RecyclerAdapter<D, V extends RecyclerViewHolder> extends R
     private List<D> data;
     private RecyclerViewHolder headerView;
     protected boolean isScrolling;
-    private OnItemClickListener listener;
+    private OnItemClickListener<D> listener;
 
     public RecyclerAdapter(RecyclerView recyclerView) {
         this(recyclerView, null);
@@ -149,7 +149,7 @@ public abstract class RecyclerAdapter<D, V extends RecyclerViewHolder> extends R
         notifyDataSetChanged();
     }
 
-    public void setOnItemClickListener(OnItemClickListener l) {
+    public void setOnItemClickListener(OnItemClickListener<D> l) {
         listener = l;
     }
 
