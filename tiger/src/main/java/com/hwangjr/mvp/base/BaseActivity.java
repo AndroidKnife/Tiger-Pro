@@ -25,9 +25,12 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 public abstract class BaseActivity extends AppCompatActivity {
+    public static final String FIX_FRAGMENT_OVERLAPPING = "fix.fragment.overlapping";
+    static final String FRAGMENTS_TAG = "android:support:fragments";
 
     private ActivityComponent activityComponent;
     private Unbinder unbinder;
+    private boolean fixFragmentOverlapping;
 
     private ViewStub tipsViewStub;
     private View tipsView;
@@ -99,6 +102,26 @@ public abstract class BaseActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(FIX_FRAGMENT_OVERLAPPING, fixFragmentOverlapping);
+        if (fixFragmentOverlapping) {
+            // drop fragments state, it's not the best way to fix overlapping
+            outState.putSerializable(FRAGMENTS_TAG, null);
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        fixFragmentOverlapping = savedInstanceState.getBoolean(FIX_FRAGMENT_OVERLAPPING, false);
+    }
+
+    protected void fixFragmentOverlapping() {
+        fixFragmentOverlapping = true;
     }
 
     public void initTipsView() {
