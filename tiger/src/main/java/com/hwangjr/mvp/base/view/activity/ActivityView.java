@@ -48,4 +48,16 @@ public abstract class ActivityView<P extends ActivityPresenter> extends BaseActi
         presenter.onDestroy();
         super.onDestroy();
     }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        presenter.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        presenter.onSaveInstanceState(savedInstanceState);
+    }
 }

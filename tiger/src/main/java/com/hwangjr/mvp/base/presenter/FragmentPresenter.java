@@ -56,4 +56,12 @@ public abstract class FragmentPresenter<V extends MVPView> implements Presenter<
         unsubscribe();
         this.view = null;
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+    }
 }

@@ -15,4 +15,8 @@ public interface Presenter<V extends MVPView> {
     void onPause();
 
     void onDestroy();
+
+    void onSaveInstanceState(Bundle outState);
+
+    void onRestoreInstanceState(Bundle savedInstanceState);
 }

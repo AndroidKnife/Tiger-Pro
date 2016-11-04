@@ -35,6 +35,7 @@ public abstract class FragmentView<P extends FragmentPresenter> extends BaseFrag
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        presenter.onSaveInstanceState(savedInstanceState);
         presenter.onCreate(savedInstanceState);
     }
 
@@ -72,5 +73,11 @@ public abstract class FragmentView<P extends FragmentPresenter> extends BaseFrag
     public void onDestroy() {
         presenter.onDestroy();
         super.onDestroy();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        presenter.onSaveInstanceState(outState);
     }
 }
